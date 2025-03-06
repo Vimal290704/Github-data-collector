@@ -23,11 +23,7 @@ const useGitHubData = (username, detailType) => {
     }
     const fetchData = async () => {
       try {
-        const response = await fetch(endpoint, {
-          headers: {
-            Authorization:  `token ${import.meta.env.VITE_GITHUB_TOKEN}`,
-          },
-        });
+        const response = await fetch(endpoint);
         if (!response.ok) {
           setError(`Error: ${response.status} - ${response.statusText}`);
           setLoading(false);
