@@ -25,7 +25,7 @@ const useGitHubData = (username, detailType) => {
       try {
         const response = await fetch(endpoint, {
           headers: {
-            Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}`,
+            Authorization:  `token ${import.meta.env.VITE_GITHUB_TOKEN}`,
           },
         });
         if (!response.ok) {
